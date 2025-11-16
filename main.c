@@ -2,14 +2,15 @@
 #include <stdlib.h>
 #include "kalkulator.h"
 
+void mulai();
 char ask(){
     char ans;
     do{
-        print("\n");
+        printf("\n");
         printf("Calculate Again? (Y/N) : ");
-        canf("%c", &ans);
-        if(ans != 'A' && ans != 'B') {
-            print("\n");
+        scanf(" %c", &ans);
+        if(ans != 'Y' && ans != 'N') {
+            printf("\n");
             printf("Input according to the options provided!!!");
         }
         
@@ -20,38 +21,47 @@ char ask(){
 
 int rerun(char dec) {
     if(dec == 'Y'){
-            system("cls");
-            mulai();
-        }else {
-            system("cls");
-            return 1;
-        }
+        system("clear");
+        mulai();
+        return 0;
+    }else {
+        system("clear");
+        return 1;
+    }
 }
 void mulai(){
-    char opt;
+    int opt;
     char dec;
-    printf("======SIMPLE CALCULATOR======\n");
-    printf("CALCULATOR OPTION");
-    printf("A. SEIRES RESISTORS\n");
-    printf("A. PARALEL RESISTORS\n\n");
+    for(int i = 0; i < 50; i ++){
+        printf("="); 
+    }
+    printf("\n");
+    printf("|  TOOLKIT LENGKAP ASISTEN LABORATORIUM ELEKTRO  |\n");
+    for(int i = 0; i < 50; i ++){
+        printf("="); 
+    }
+    printf("\n");
+    printf("|     ----VERIFIKASI RANGLKAIAN LISTRIK----      |\n");
+    printf("|   3. SEIRES RESISTORS                          |\n");
+    printf("|   4. PARALEL RESISTORS                         |\n\n");
 
     do{
     printf("Choose Calculator : ");
-    scanf("%c", &opt);
-    if(opt != 'A' && opt != 'B') {
-        print("\n");
+    scanf(" %d", &opt);
+    if(opt > 9 && opt < 1 ) {
+        printf("\n");
         printf("Input according to the options provided!!!");
     }
     } 
-    while(opt != 'A' && opt != 'B');
+    while(opt > 9 && opt < 1 );
 
-    if(opt == 'A'){
+    if(opt == 3 ){
         seri();
         dec = ask();
         if(rerun(dec)){
             return;
         }
-    }else if(opt == 'B'){
+    }else if(opt == 4 ){
         paralel();
         dec = ask();
         if(rerun(dec)){
@@ -62,7 +72,7 @@ void mulai(){
 }
 int main(){
 
-    seri();
+    mulai();
     
     return 0;
 }
