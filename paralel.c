@@ -28,5 +28,6 @@ void paralel(){
     result = 1/temp_result;
 
     printf("Resistor Equivalent : %.3f ohm\n", result);
+    printf("\n");
 
 }

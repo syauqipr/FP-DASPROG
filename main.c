@@ -2,32 +2,6 @@
 #include <stdlib.h>
 #include "kalkulator.h"
 
-void mulai();
-char ask(){
-    char ans;
-    do{
-        printf("\n");
-        printf("Calculate Again? (Y/N) : ");
-        scanf(" %c", &ans);
-        if(ans != 'Y' && ans != 'N') {
-            printf("\n");
-            printf("Input according to the options provided!!!");
-        }
-        
-    } while(ans != 'Y' && ans != 'N');
-
-    return ans;
-}
-int rerun(char dec) {
-    if(dec == 'Y'){
-        system("clear");
-        mulai();
-        return 0;
-    }else {
-        system("clear");
-        return 1;
-    }
-}
 void mulai(){
     int opt = 1;
     char dec;
@@ -51,7 +25,7 @@ void mulai(){
         printf("Input according to the options provided!!!\n");
     }
 
-    printf("Choose Calculator : ");
+    printf("Choose an Option : ");
     scanf(" %d", &opt);
     if(opt > 9 || opt < 1 ){
         system("clear");

@@ -23,4 +23,5 @@ void seri(){
     }
 
     printf("Resistor Equivalent : %.3f\n", result);
+    printf("\n");
 }
