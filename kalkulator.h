@@ -3,5 +3,7 @@
 
 void paralel();
 void seri();
+void decimal();
 
+int digit();
 #endif
