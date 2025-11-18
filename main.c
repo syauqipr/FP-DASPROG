@@ -16,7 +16,8 @@ void mulai(int opt){
     printf("\n");
     printf("|     ----VERIFIKASI RANGLKAIAN LISTRIK----      |\n");
     printf("|   3. SEIRES RESISTORS                          |\n");
-    printf("|   4. PARALEL RESISTORS                         |\n\n");
+    printf("|   4. PARALEL RESISTORS                         |\n");
+    printf("|   9. QUIT                                      |\n\n");
 
     if(opt > 9 || opt < 1 ) {
         printf("\n");
@@ -37,6 +38,9 @@ void mulai(int opt){
             paralel();
 
             break;
+
+        case 9:
+            exit(0);
 
         default :
             system("clear");
