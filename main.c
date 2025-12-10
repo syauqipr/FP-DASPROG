@@ -43,6 +43,8 @@ void mulai(int opt){
 
     switch(opt){
         case 1:
+            printf("\n");
+            hukum_ohm();
 
             break;
         case 2:
