@@ -64,8 +64,3 @@ void daya() {
         }
     }
 }
-
-int main() {
-    daya();
-    return 0;
-}
