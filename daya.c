@@ -4,7 +4,7 @@ void garis() {
     printf("+------------------------------------------+\n");
 }
 
-int main() {
+void daya(){
     int pilihan = 0; 
     float V, I, R, P;
 
