@@ -1,8 +1,13 @@
 #include <stdio.h>
 
 static void garis() {
-    printf("+------------------------------------------+\n");
+    printf("+");
+    for (int i = 0; i < 42; i++) {
+        printf("-");
+    }
+    printf("+\n");
 }
+
 
 void daya() {
     int pilihan = 0; 
