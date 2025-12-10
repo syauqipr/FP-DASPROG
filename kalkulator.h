@@ -4,6 +4,7 @@
 void paralel();
 void seri();
 void decimal();
+void daya();
 
 int digit();
 #endif
