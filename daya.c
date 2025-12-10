@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 static void garis() {
+    int i;
     printf("+");
-    for (int i = 0; i < 42; i++) {
+    for (i = 0; i < 42; i++) {
         printf("-");
     }
     printf("+\n");
