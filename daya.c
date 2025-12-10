@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-void garis() {
+static void garis() {
     printf("+------------------------------------------+\n");
 }
 
-void daya(){
+void daya() {
     int pilihan = 0; 
     float V, I, R, P;
 
@@ -13,6 +13,7 @@ void daya(){
         garis();
         printf("|        KALKULATOR DAYA LISTRIK           |\n");
         garis();
+
         printf("| Daya (P) memiliki satuan Watt            |\n");
         printf("| Rumus daya:                              |\n");
         printf("| 1) P = V x I                             |\n");
@@ -32,42 +33,39 @@ void daya(){
         garis();
 
         if (pilihan == 1) {
-            printf(" Masukkan Tegangan (V) tanpa satuan : ");
+            printf(" Masukkan Tegangan (V): ");
             scanf("%f", &V);
-            printf(" Masukkan Arus (I) tanpa satuan : ");
+            printf(" Masukkan Arus (I): ");
             scanf("%f", &I);
             P = V * I;
             printf(" Daya (P) = %.2f Watt\n", P);
         }
-
         else if (pilihan == 2) {
-            printf(" Masukkan Arus (I) tanpa satuan : ");
+            printf(" Masukkan Arus (I): ");
             scanf("%f", &I);
-            printf(" Masukkan Hambatan (R) tanpa satuan : ");
+            printf(" Masukkan Hambatan (R): ");
             scanf("%f", &R);
             P = I * I * R;
             printf(" Daya (P) = %.2f Watt\n", P);
         }
-
         else if (pilihan == 3) {
-            printf(" Masukkan Tegangan (V) tanpa satuan : ");
+            printf(" Masukkan Tegangan (V): ");
             scanf("%f", &V);
-            printf(" Masukkan Hambatan (R) tanpa satuan : ");
+            printf(" Masukkan Hambatan (R): ");
             scanf("%f", &R);
             P = (V * V) / R;
             printf(" Daya (P) = %.2f Watt\n", P);
         }
-
         else if (pilihan == 4) {
             printf("Keluar program...\n");
         }
-
         else {
             printf(" Pilihan tidak valid! Masukkan angka 1-4.\n");
         }
-
-        printf("\n");
     }
+}
 
+int main() {
+    daya();
     return 0;
 }
