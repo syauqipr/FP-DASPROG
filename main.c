@@ -46,6 +46,8 @@ void mulai(int opt){
 
             break;
         case 2:
+            printf("\n");
+            daya();
 
             break;
         case 3 :
